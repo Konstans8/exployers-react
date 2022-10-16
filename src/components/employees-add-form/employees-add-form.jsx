@@ -2,7 +2,8 @@
 
 import { Component } from 'react';
 
-import './employees-add-form.css';
+// import './employees-add-form.css';
+import './employees-add-form.scss';
 
 class EmployeesAddForm extends Component {
     constructor(props) {
@@ -21,7 +22,6 @@ class EmployeesAddForm extends Component {
 
     onSubmit = (e) => {
         e.preventDefault();
-        // Можно еще и сообщения добавлять, подсветку, атрибуты minlength и тд.
         if (this.state.name.length < 3 || !this.state.salary) return;
         this.props.onAdd(this.state.name, this.state.salary);
         this.setState({
